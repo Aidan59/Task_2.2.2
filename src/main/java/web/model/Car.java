@@ -14,6 +14,13 @@ public class Car {
         this.year = year;
     }
 
+    @Override
+    public String toString() {
+        return "model='" + model + '\'' +
+                ", series=" + series +
+                ", year=" + year;
+    }
+
     public String getModel() {
         return model;
     }

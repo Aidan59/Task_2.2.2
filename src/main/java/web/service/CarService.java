@@ -1,8 +1,10 @@
 package web.service;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 import web.model.Car;
 
+@Component
 public class CarService {
 
     private final List<Car> carList = List.of(
