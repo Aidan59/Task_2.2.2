@@ -3,14 +3,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cars List</title>
+  <title>Cars Table</title>
 </head>
 <body>
 <div>
-  <h1>Car list:</h1>
-  <th:block th:each="car : ${cars}">
-    <h1 th:text="${car}"></h1>
-  </th:block>
+  <h1>Car table:</h1>
+  <table border="1">
+    <thead>
+    <tr>
+      <th>Model</th>
+      <th>Series</th>
+      <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+      <td th:text="${car.getModel()}"></td>
+      <td th:text="${car.getSeries()}"></td>
+      <td th:text="${car.getYear()}"></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 </body>
 </html>
